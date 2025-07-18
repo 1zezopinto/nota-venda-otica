@@ -1,0 +1,400 @@
+{
+    "Cliente": {
+        "x": 80,
+        "y": 46,
+        "width": 350,
+        "height": 15
+    },
+    "CPF": {
+        "x": 370,
+        "y": 46,
+        "width": 200,
+        "height": 15
+    },
+    "Paciente": {
+        "x": 87,
+        "y": 63,
+        "width": 350,
+        "height": 15
+    },
+    "Bairro": {
+        "x": 378,
+        "y": 63,
+        "width": 200,
+        "height": 15
+    },
+    "Endere\u00e7o": {
+        "x": 90,
+        "y": 81,
+        "width": 350,
+        "height": 15
+    },
+    "Cidade": {
+        "x": 380,
+        "y": 81,
+        "width": 200,
+        "height": 15
+    },
+    "Est": {
+        "x": 532,
+        "y": 81,
+        "width": 50,
+        "height": 15
+    },
+    "Data Compra": {
+       "x": 106,
+        "y": 98,
+        "width": 150,
+        "height": 15
+    },
+    "Prev. Entrega": {
+        "x": 265,
+        "y": 98,
+        "width": 150,
+        "height": 15
+    },
+    "M\u00e9dico": {
+        "x": 382,
+        "y": 98,
+        "width": 280,
+        "height": 15
+    },
+    "Telefone/Contato": {
+        "x": 420,
+        "y": 133,
+        "width": 180,
+        "height": 15
+    },
+    "Fornecedor/Lab": {
+        "x": 420,
+        "y": 168,
+        "width": 180,
+        "height": 15
+    },
+    "Consultor/Vendedor": {
+        "x": 420,
+        "y": 202,
+        "width": 180,
+        "height": 15
+    },
+    "Longe_OD_Esferico": {
+        "x": 119,
+        "y": 133,
+        "width": 50,
+        "height": 15
+    },
+    "Longe_OD_Cilindrico": {
+        "x": 188,
+        "y": 133,
+        "width": 50,
+        "height": 15
+    },
+    "Longe_OD_Eixo": {
+        "x": 252,
+        "y": 133,
+        "width": 50,
+        "height": 15
+    },
+    "Longe_OD_DNP_Altura": {
+        "x": 318,
+        "y": 133,
+        "width": 50,
+        "height": 15
+    },
+    "Longe_OD_Adicao": {
+        "x": 382,
+        "y": 133,
+        "width": 50,
+        "height": 15
+    },
+    "Longe_OE_Esferico": {
+        "x": 119,
+        "y": 151,
+        "width": 50,
+        "height": 15
+    },
+    "Longe_OE_Cilindrico": {
+        "x": 188,
+        "y": 151,
+        "width": 50,
+        "height": 15
+    },
+    "Longe_OE_Eixo": {
+        "x": 252,
+        "y": 151,
+        "width": 50,
+        "height": 15
+    },
+    "Longe_OE_DNP_Altura": {
+        "x": 318,
+        "y": 151,
+        "width": 50,
+        "height": 15
+    },
+    "Longe_OE_Adicao": {
+        "x": 382,
+        "y": 151,
+        "width": 50,
+        "height": 15
+    },
+    "Perto_OD_Esferico": {
+        "x": 119,
+        "y": 185,
+        "width": 50,
+        "height": 15
+    },
+    "Perto_OD_Cilindrico": {
+        "x": 188,
+        "y": 185,
+        "width": 50,
+        "height": 15
+    },
+    "Perto_OD_Eixo": {
+        "x": 252,
+        "y": 185,
+        "width": 50,
+        "height": 15
+    },
+    "Perto_OD_DNP_Altura": {
+        "x": 318,
+        "y": 185,
+        "width": 50,
+        "height": 15
+    },
+    "Perto_OD_Adicao": {
+        "x": 382,
+        "y": 185,
+        "width": 50,
+        "height": 15
+    },
+    "Perto_OE_Esferico": {
+        "x": 119,
+        "y": 203,
+        "width": 50,
+        "height": 15
+    },
+    "Perto_OE_Cilindrico": {
+        "x": 188,
+        "y": 203,
+        "width": 50,
+        "height": 15
+    },
+    "Perto_OE_Eixo": {
+        "x": 252,
+        "y": 203,
+        "width": 50,
+        "height": 15
+    },
+    "Perto_OE_DNP_Altura": {
+        "x": 318,
+        "y": 203,
+        "width": 50,
+        "height": 15
+    },
+    "Perto_OE_Adicao": {
+        "x": 382,
+        "y": 203,
+        "width": 50,
+        "height": 15
+    },
+    "Produto_1": {
+        "x": 58,
+        "y": 240,
+        "width": 150,
+        "height": 15
+    },
+    "Quant_1": {
+        "x": 120,
+        "y": 240,
+        "width": 50,
+        "height": 15
+    },
+    "Descricao_Mercadoria_1": {
+        "x": 170,
+        "y": 240,
+        "width": 350,
+        "height": 15
+    },
+    "Valor_1": {
+        "x": 520,
+        "y": 240,
+        "width": 130,
+        "height": 15
+    },
+    "Produto_2": {
+        "x": 58,
+        "y": 256,
+        "width": 150,
+        "height": 15
+    },
+    "Quant_2": {
+        "x": 120,
+        "y": 256,
+        "width": 50,
+        "height": 15
+    },
+    "Descricao_Mercadoria_2": {
+        "x": 170,
+        "y": 256,
+        "width": 350,
+        "height": 15
+    },
+    "Valor_2": {
+        "x": 520,
+        "y": 256,
+        "width": 130,
+        "height": 15
+    },
+    "Produto_3": {
+        "x": 58,
+        "y": 273,
+        "width": 150,
+        "height": 15
+    },
+    "Quant_3": {
+        "x": 120,
+        "y": 273,
+        "width": 50,
+        "height": 15
+    },
+    "Descricao_Mercadoria_3": {
+        "x": 170,
+        "y": 273,
+        "width": 350,
+        "height": 15
+    },
+    "Valor_3": {
+        "x": 520,
+        "y": 273,
+        "width": 130,
+        "height": 15
+    },
+    "Produto_4": {
+        "x": 58,
+        "y": 291,
+        "width": 150,
+        "height": 15
+    },
+    "Quant_4": {
+        "x": 120,
+        "y": 291,
+        "width": 50,
+        "height": 15
+    },
+    "Descricao_Mercadoria_4": {
+        "x": 170,
+        "y": 291,
+        "width": 350,
+        "height": 15
+    },
+    "Valor_4": {
+        "x": 520,
+        "y": 291,
+        "width": 130,
+        "height": 15
+    },
+    "Produto_5": {
+        "x": 58,
+        "y": 309,
+        "width": 150,
+        "height": 15
+    },
+    "Quant_5": {
+        "x": 120,
+        "y": 309,
+        "width": 50,
+        "height": 15
+    },
+    "Descricao_Mercadoria_5": {
+        "x": 170,
+        "y": 309,
+        "width": 350,
+        "height": 15
+    },
+    "Valor_5": {
+        "x": 520,
+        "y": 309,
+        "width": 130,
+        "height": 15
+    },
+    "Valor_Total_Produtos": {
+        "x": 520,
+        "y": 324,
+        "width": 130,
+        "height": 15
+    },
+    "Desconto": {
+        "x": 520,
+        "y": 342,
+        "width": 130,
+        "height": 15
+    },
+    "Valor_Total_a_Pagar": {
+        "x": 520,
+        "y": 360,
+        "width": 130,
+        "height": 15
+    },
+    "Pagamento_Dinheiro": {
+        "x": 75,
+        "y": 365,
+        "width": 10,
+        "height": 10
+    },
+    "Pagamento_Pix": {
+        "x": 150,
+        "y": 365,
+        "width": 10,
+        "height": 10
+    },
+    "Pagamento_Debito": {
+        "x": 230,
+        "y": 365,
+        "width": 10,
+        "height": 10
+    },
+    "Pagamento_Credito": {
+        "x": 300,
+        "y": 365,
+        "width": 10,
+        "height": 10
+    },
+    "Produto_1_2": {"x": 58, "y": 576, "width": 150, "height": 15},
+    "Quant_1_2": {"x": 120, "y": 576, "width": 50, "height": 15},
+    "Descricao_Mercadoria_1_2": {"x": 170, "y": 576, "width": 350, "height": 15},
+    "Valor_1_2": {"x": 520, "y": 576, "width": 130, "height": 15},
+
+    "Produto_2_2": {"x": 58, "y": 590, "width": 150, "height": 15},
+    "Quant_2_2": {"x": 120, "y": 590, "width": 50, "height": 15},
+    "Descricao_Mercadoria_2_2": {"x": 170, "y": 590, "width": 350, "height": 15},
+    "Valor_2_2": {"x": 520, "y": 590, "width": 130, "height": 15},
+
+    "Produto_3_2": {"x": 58, "y": 728, "width": 150, "height": 15},
+    "Quant_3_2": {"x": 120, "y": 728, "width": 50, "height": 15},
+    "Descricao_Mercadoria_3_2": {"x": 170, "y": 728, "width": 350, "height": 15},
+    "Valor_3_2": {"x": 520, "y": 728, "width": 130, "height": 15},
+
+    "Produto_4_2": {"x": 58, "y": 748, "width": 150, "height": 15},
+    "Quant_4_2": {"x": 120, "y": 748, "width": 50, "height": 15},
+    "Descricao_Mercadoria_4_2": {"x": 170, "y": 748, "width": 350, "height": 15},
+    "Valor_4_2": {"x": 520, "y": 748, "width": 130, "height": 15},
+
+    "Produto_5_2": {"x": 58, "y": 768, "width": 150, "height": 15},
+    "Quant_5_2": {"x": 120, "y": 768, "width": 50, "height": 15},
+    "Descricao_Mercadoria_5_2": {"x": 240, "y": 768, "width": 350, "height": 15},
+    "Valor_5_2": {"x": 520, "y": 768, "width": 130, "height": 15},
+
+    "Valor_Total_Produtos_2": {"x": 600, "y": 828, "width": 130, "height": 15},
+    "Desconto_2": {"x": 600, "y": 853, "width": 130, "height": 15},
+    "Valor_Total_a_Pagar_2": {"x": 600, "y": 878, "width": 130, "height": 15},
+
+    "Pagamento_Dinheiro_2": {"x": 100, "y": 890, "width": 10, "height": 10},
+    "Pagamento_Pix_2": {"x": 100, "y": 910, "width": 10, "height": 10},
+    "Pagamento_Debito_2": {"x": 100, "y": 930, "width": 10, "height": 10},
+    "Pagamento_Credito_2": {"x": 100, "y": 950, "width": 10, "height": 10},
+
+    "Assinatura_Cliente_2": {"x": 100, "y": 948, "width": 300, "height": 15},
+    "N_Assinatura_2": {"x": 650, "y": 948, "width": 80, "height": 15}
+
+}
+
