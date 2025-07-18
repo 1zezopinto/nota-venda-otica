@@ -89,7 +89,7 @@ app.post('/gerar-pdf', async (req, res) => {
     drawTextAtCoordinate(firstPage, data.perto_oe_adicao, 'Perto_OE_Adicao');
 
     // Telefone/Contato, Fornecedor/Lab, Consultor/Vendedor
-    drawTextAtCoordinate(firstPage, `(${data.ddd_telefone}) ${data.telefoneContato}`, 'Telefone/Contato');
+    drawTextAtCoordinate(firstPage, `${data.ddd_telefone} ${data.telefoneContato}`, 'Telefone/Contato');
     drawTextAtCoordinate(firstPage, data.fornecedorLab, 'Fornecedor/Lab');
     drawTextAtCoordinate(firstPage, data.consultorVendedor, 'Consultor/Vendedor');
 
