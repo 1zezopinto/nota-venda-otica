@@ -10,25 +10,31 @@
   <div class="max-w-2xl mx-auto bg-white p-6 rounded shadow">
     <h1 class="text-xl font-bold mb-4">Preencher Nota de Venda</h1>
     <form id="form" class="space-y-4">
-      <input name="cliente" placeholder="Cliente" class="w-full border p-2 rounded"/>
-      <input name="cpf" placeholder="CPF" class="w-full border p-2 rounded"/>
-      <input name="paciente" placeholder="Paciente" class="w-full border p-2 rounded"/>
-      <input name="bairro" placeholder="Bairro" class="w-full border p-2 rounded"/>
-      <input name="endereco" placeholder="Endereço" class="w-full border p-2 rounded"/>
-      <input name="cidade" placeholder="Cidade" class="w-full border p-2 rounded"/>
-      <input name="estado" placeholder="Estado" class="w-full border p-2 rounded"/>
+      <input name="cliente" placeholder="Cliente" class="w-full border p-2 rounded" required/>
+      <input name="cpf" id="cpf" placeholder="CPF" class="w-full border p-2 rounded" required/>
+      <input name="paciente" placeholder="Paciente" class="w-full border p-2 rounded" required/>
+      <input name="bairro" placeholder="Bairro" class="w-full border p-2 rounded" required/>
+      <input name="endereco" placeholder="Endereço" class="w-full border p-2 rounded" required/>
+      <input name="cidade" placeholder="Cidade" class="w-full border p-2 rounded" required/>
+      <input name="estado" placeholder="Estado" class="w-full border p-2 rounded" required/>
       <label class="block">Data da Compra:
-        <input type="date" name="dataCompra" class="w-full border p-2 rounded"/>
+        <input type="date" name="dataCompra" class="w-full border p-2 rounded" required/>
       </label>
       <label class="block">Previsão de Entrega:
-        <input type="date" name="prevEntrega" class="w-full border p-2 rounded"/>
+        <input type="date" name="prevEntrega" class="w-full border p-2 rounded" required/>
       </label>
       <label class="block">Médico:
-        <select name="medico" class="w-full border p-2 rounded" >
+        <select name="medico" class="w-full border p-2 rounded" required>
           <option value="">Selecione um Médico</option>
-          <option>Médico 1</option>
-          <option>Médico 2</option>
-          <option>Médico 3</option>
+          <option>Dr. Kleber</option>
+          <option>Dr. Edu Silva</option>
+          <option>Dr. Reginaldo</option>
+          <option>Dr. Waldemar Ribeiro</option>
+          <option>Opto. Marcos Vinícius</option>
+          <option>OPto. Izabela Prago</option>
+          <option>Opto. Mary Matos</option>
+          <option>Opto. Andréia</option>
+          <option>Opto. Albertina</option>
         </select>
       </label>
 
@@ -36,19 +42,19 @@
       <div class="grid grid-cols-2 gap-4">
         <div>
           <h3 class="font-medium">OD</h3>
-          <input name="longe_od_esferico" placeholder="Esférico OD" class="w-full border p-2 rounded" />
-          <input name="longe_od_cilindrico" placeholder="Cilíndrico OD" class="w-full border p-2 rounded mt-2" />
-          <input name="longe_od_eixo" placeholder="Eixo OD" class="w-full border p-2 rounded mt-2" />
-          <input name="longe_od_dnp_altura" placeholder="DNP/Altura OD" class="w-full border p-2 rounded mt-2" />
-          <input name="longe_od_adicao" placeholder="Adição OD" class="w-full border p-2 rounded mt-2" />
+          <input name="longe_od_esferico" placeholder="Esférico OD" class="w-full border p-2 rounded" required/>
+          <input name="longe_od_cilindrico" placeholder="Cilíndrico OD" class="w-full border p-2 rounded mt-2" required/>
+          <input name="longe_od_eixo" placeholder="Eixo OD" class="w-full border p-2 rounded mt-2" required/>
+          <input name="longe_od_dnp_altura" placeholder="DNP/Altura OD" class="w-full border p-2 rounded mt-2" required/>
+          <input name="longe_od_adicao" placeholder="Adição OD" class="w-full border p-2 rounded mt-2" required/>
         </div>
         <div>
           <h3 class="font-medium">OE</h3>
-          <input name="longe_oe_esferico" placeholder="Esférico OE" class="w-full border p-2 rounded" />
-          <input name="longe_oe_cilindrico" placeholder="Cilíndrico OE" class="w-full border p-2 rounded mt-2" />
-          <input name="longe_oe_eixo" placeholder="Eixo OE" class="w-full border p-2 rounded mt-2" />
-          <input name="longe_oe_dnp_altura" placeholder="DNP/Altura OE" class="w-full border p-2 rounded mt-2" />
-          <input name="longe_oe_adicao" placeholder="Adição OE" class="w-full border p-2 rounded mt-2" />
+          <input name="longe_oe_esferico" placeholder="Esférico OE" class="w-full border p-2 rounded" required/>
+          <input name="longe_oe_cilindrico" placeholder="Cilíndrico OE" class="w-full border p-2 rounded mt-2" required/>
+          <input name="longe_oe_eixo" placeholder="Eixo OE" class="w-full border p-2 rounded mt-2" required/>
+          <input name="longe_oe_dnp_altura" placeholder="DNP/Altura OE" class="w-full border p-2 rounded mt-2" required/>
+          <input name="longe_oe_adicao" placeholder="Adição OE" class="w-full border p-2 rounded mt-2" required/>
         </div>
       </div>
 
@@ -56,28 +62,28 @@
       <div class="grid grid-cols-2 gap-4">
         <div>
           <h3 class="font-medium">OD</h3>
-          <input name="perto_od_esferico" placeholder="Esférico OD" class="w-full border p-2 rounded" />
-          <input name="perto_od_cilindrico" placeholder="Cilíndrico OD" class="w-full border p-2 rounded mt-2" />
-          <input name="perto_od_eixo" placeholder="Eixo OD" class="w-full border p-2 rounded mt-2" />
-          <input name="perto_od_dnp_altura" placeholder="DNP/Altura OD" class="w-full border p-2 rounded mt-2" />
-          <input name="perto_od_adicao" placeholder="Adição OD" class="w-full border p-2 rounded mt-2" />
+          <input name="perto_od_esferico" placeholder="Esférico OD" class="w-full border p-2 rounded" required/>
+          <input name="perto_od_cilindrico" placeholder="Cilíndrico OD" class="w-full border p-2 rounded mt-2" required/>
+          <input name="perto_od_eixo" placeholder="Eixo OD" class="w-full border p-2 rounded mt-2" required/>
+          <input name="perto_od_dnp_altura" placeholder="DNP/Altura OD" class="w-full border p-2 rounded mt-2" required/>
+          <input name="perto_od_adicao" placeholder="Adição OD" class="w-full border p-2 rounded mt-2" required/>
         </div>
         <div>
           <h3 class="font-medium">OE</h3>
-          <input name="perto_oe_esferico" placeholder="Esférico OE" class="w-full border p-2 rounded" />
-          <input name="perto_oe_cilindrico" placeholder="Cilíndrico OE" class="w-full border p-2 rounded mt-2" />
-          <input name="perto_oe_eixo" placeholder="Eixo OE" class="w-full border p-2 rounded mt-2" />
-          <input name="perto_oe_dnp_altura" placeholder="DNP/Altura OE" class="w-full border p-2 rounded mt-2" />
-          <input name="perto_oe_adicao" placeholder="Adição OE" class="w-full border p-2 rounded mt-2" />
+          <input name="perto_oe_esferico" placeholder="Esférico OE" class="w-full border p-2 rounded" required/>
+          <input name="perto_oe_cilindrico" placeholder="Cilíndrico OE" class="w-full border p-2 rounded mt-2" required/>
+          <input name="perto_oe_eixo" placeholder="Eixo OE" class="w-full border p-2 rounded mt-2" required/>
+          <input name="perto_oe_dnp_altura" placeholder="DNP/Altura OE" class="w-full border p-2 rounded mt-2" required/>
+          <input name="perto_oe_adicao" placeholder="Adição OE" class="w-full border p-2 rounded mt-2" required/>
         </div>
       </div>
 
       <label class="block">Telefone/Contato (DDD):</label>
-      <input name="ddd_telefone" placeholder="DDD" class="w-1/4 border p-2 rounded" maxlength="2" />
-      <input name="telefoneContato" placeholder="Telefone/Contato" class="w-3/4 border p-2 rounded" />
+      <input name="ddd_telefone" placeholder="DDD" class="w-1/4 border p-2 rounded" maxlength="2" required/>
+      <input name="telefoneContato" placeholder="Telefone/Contato" class="w-3/4 border p-2 rounded" required/>
 
       <label class="block"> Fornecedor/Lab:
-        <select name="fornecedorLab" class="w-full border p-2 rounded">
+        <select name="fornecedorLab" class="w-full border p-2 rounded" required>
           <option value="">Selecione o Fornecedor</option>
           <option>BSSILOR</option>
           <option>HOYA</option>
@@ -96,7 +102,7 @@
       </label>
 
       <label class="block"> Consultor/Vendedor
-        <select name="consultorVendedor" class="w-full border p-2 rounded">
+        <select name="consultorVendedor" class="w-full border p-2 rounded" required>
           <option value="">Selecione o Vendedor(a)</option>
           <option>VITOR MARTINS</option>
           <option>ANA CLAUDIA</option>
@@ -112,16 +118,16 @@
   
         <div class="produto-item border p-4 rounded">
           <h3 class="font-medium">Produto 1</h3>
-          <input name="produto_1" placeholder="Produto" class="w-full border p-2 rounded" />
-          <input name="quant_1" type="number" placeholder="Quantidade" class="w-full border p-2 rounded mt-2" min="0" step="any" />
-          <input name="descricao_mercadoria_1" placeholder="Descrição Mercadoria" class="w-full border p-2 rounded mt-2" />
-          <input name="valor_1" type="number" placeholder="Valor" class="w-full border p-2 rounded mt-2" min="0" step="any" />
+          <input name="produto_1" placeholder="Produto" class="w-full border p-2 rounded" required/>
+          <input name="quant_1" type="number" placeholder="Quantidade" class="w-full border p-2 rounded mt-2" min="0" step="any" required/>
+          <input name="descricao_mercadoria_1" placeholder="Descrição Mercadoria" class="w-full border p-2 rounded mt-2" required/>
+          <input name="valor_1" type="number" placeholder="Valor" class="w-full border p-2 rounded mt-2" min="0" step="any" required/>
         </div>
       </div>
       <button type="button" id="add-produto" class="bg-green-600 text-white px-4 py-2 rounded">Adicionar Produto</button>
 
       <label class="block">Forma de Pagamento:
-        <select name="pagamento" class="w-full border p-2 rounded" >
+        <select name="pagamento" class="w-full border p-2 rounded" required>
           <option value="">Selecione a Forma de Pagamento</option>
           <option>Dinheiro</option>
           <option>Pix</option>
@@ -184,6 +190,40 @@
       const url = URL.createObjectURL(blob);
       window.open(url, "_blank");
     });
+
+    document.getElementById('cpf').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+
+    if (value.length > 11) value = value.slice(0, 11);
+
+    value = value.replace(/(\d{3})(\d)/, '$1.$2');
+    value = value.replace(/(\d{3})(\d)/, '$1.$2');
+    value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+
+    e.target.value = value;
+  });
+
+//     const formatCurrencyInput = (input) => {
+//     input.addEventListener('input', () => {
+//     let value = input.value.replace(/\D/g, '');
+
+//     if (value.length < 3) {
+//       value = value.padStart(3, '0');
+//     }
+
+//     value = (parseInt(value) / 100).toFixed(2);
+//     input.value = `R$ ${value.replace('.', ',')}`;
+//   });
+// };
+
+// // Aplica nos campos de valor individual e desconto
+// for (let i = 1; i <= 5; i++) {
+//   const valorInput = document.querySelector(`input[name=valor_${i}]`);
+//   if (valorInput) formatCurrencyInput(valorInput);
+// }
+
+// formatCurrencyInput(document.querySelector('input[name=desconto]'));
+
   </script>
 </body>
 </html>

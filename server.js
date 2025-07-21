@@ -93,6 +93,13 @@ app.post('/gerar-pdf', async (req, res) => {
     drawTextAtCoordinate(firstPage, data.fornecedorLab, 'Fornecedor/Lab');
     drawTextAtCoordinate(firstPage, data.consultorVendedor, 'Consultor/Vendedor');
 
+
+    const formatarDinheiro = (valor) => {
+    const numero = parseFloat(valor);
+      if (isNaN(numero)) return '';
+      return `R$ ${numero.toFixed(2).replace('.', ',')}`;
+   };
+
     // Produtos (até 5)
         // Produtos (até 5)
     for (let i = 1; i <= 5; i++) {
@@ -105,13 +112,13 @@ app.post('/gerar-pdf', async (req, res) => {
       drawTextAtCoordinate(firstPage, produto, `Produto_${i}`);
       drawTextAtCoordinate(firstPage, quant, `Quant_${i}`);
       drawTextAtCoordinate(firstPage, descricao, `Descricao_Mercadoria_${i}`);
-      drawTextAtCoordinate(firstPage, valor, `Valor_${i}`);
+      drawTextAtCoordinate(firstPage, formatarDinheiro(valor), `Valor_${i}`);
 
       // Segunda seção de produtos
       drawTextAtCoordinate(firstPage, produto, `Produto_${i}_2`);
       drawTextAtCoordinate(firstPage, quant, `Quant_${i}_2`);
       drawTextAtCoordinate(firstPage, descricao, `Descricao_Mercadoria_${i}_2`);
-      drawTextAtCoordinate(firstPage, valor, `Valor_${i}_2`);
+      drawTextAtCoordinate(firstPage, formatarDinheiro(valor), `Valor_${i}_2`);
     }
 
 
@@ -136,15 +143,13 @@ app.post('/gerar-pdf', async (req, res) => {
         break;
     }
 
-    // Valores Totais
-    drawTextAtCoordinate(firstPage, data.valorTotalProdutos, 'Valor_Total_Produtos');
-    drawTextAtCoordinate(firstPage, data.desconto, 'Desconto');
-    drawTextAtCoordinate(firstPage, data.valorTotalPagar, 'Valor_Total_a_Pagar');
+  drawTextAtCoordinate(firstPage, formatarDinheiro(data.valorTotalProdutos), 'Valor_Total_Produtos');
+  drawTextAtCoordinate(firstPage, formatarDinheiro(data.desconto), 'Desconto');
+  drawTextAtCoordinate(firstPage, formatarDinheiro(data.valorTotalPagar), 'Valor_Total_a_Pagar');
 
-    // Segunda seção de valores totais
-    drawTextAtCoordinate(firstPage, data.valorTotalProdutos, 'Valor_Total_Produtos_2');
-    drawTextAtCoordinate(firstPage, data.desconto, 'Desconto_2');
-    drawTextAtCoordinate(firstPage, data.valorTotalPagar, 'Valor_Total_a_Pagar_2');
+  drawTextAtCoordinate(firstPage, formatarDinheiro(data.valorTotalProdutos), 'Valor_Total_Produtos_2');
+  drawTextAtCoordinate(firstPage, formatarDinheiro(data.desconto), 'Desconto_2');
+  drawTextAtCoordinate(firstPage, formatarDinheiro(data.valorTotalPagar), 'Valor_Total_a_Pagar_2');
 
 
     const pdfBytes = await pdfDoc.save();

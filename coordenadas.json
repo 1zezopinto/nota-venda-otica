@@ -198,31 +198,31 @@
         "height": 15
     },
     "Produto_1": {
-        "x": 58,
-        "y": 240,
+        "x": 45,
+        "y": 239,
         "width": 150,
         "height": 15
     },
     "Quant_1": {
         "x": 120,
-        "y": 240,
+        "y": 239,
         "width": 50,
         "height": 15
     },
     "Descricao_Mercadoria_1": {
         "x": 170,
-        "y": 240,
+        "y": 239,
         "width": 350,
         "height": 15
     },
     "Valor_1": {
-        "x": 520,
-        "y": 240,
+        "x": 510,
+        "y": 239,
         "width": 130,
         "height": 15
     },
     "Produto_2": {
-        "x": 58,
+        "x": 45,
         "y": 256,
         "width": 150,
         "height": 15
@@ -240,13 +240,13 @@
         "height": 15
     },
     "Valor_2": {
-        "x": 520,
+        "x": 510,
         "y": 256,
         "width": 130,
         "height": 15
     },
     "Produto_3": {
-        "x": 58,
+        "x": 45,
         "y": 273,
         "width": 150,
         "height": 15
@@ -264,13 +264,13 @@
         "height": 15
     },
     "Valor_3": {
-        "x": 520,
+        "x": 510,
         "y": 273,
         "width": 130,
         "height": 15
     },
     "Produto_4": {
-        "x": 58,
+        "x": 45,
         "y": 291,
         "width": 150,
         "height": 15
@@ -288,13 +288,13 @@
         "height": 15
     },
     "Valor_4": {
-        "x": 520,
+        "x": 510,
         "y": 291,
         "width": 130,
         "height": 15
     },
     "Produto_5": {
-        "x": 58,
+        "x": 45,
         "y": 309,
         "width": 150,
         "height": 15
@@ -312,25 +312,25 @@
         "height": 15
     },
     "Valor_5": {
-        "x": 520,
+        "x": 510,
         "y": 309,
         "width": 130,
         "height": 15
     },
     "Valor_Total_Produtos": {
-        "x": 520,
+        "x": 510,
         "y": 324,
         "width": 130,
         "height": 15
     },
     "Desconto": {
-        "x": 520,
+        "x": 510,
         "y": 342,
         "width": 130,
         "height": 15
     },
     "Valor_Total_a_Pagar": {
-        "x": 520,
+        "x": 510,
         "y": 360,
         "width": 130,
         "height": 15
@@ -359,42 +359,39 @@
         "width": 10,
         "height": 10
     },
-    "Produto_1_2": {"x": 58, "y": 576, "width": 150, "height": 15},
-    "Quant_1_2": {"x": 120, "y": 576, "width": 50, "height": 15},
-    "Descricao_Mercadoria_1_2": {"x": 170, "y": 576, "width": 350, "height": 15},
-    "Valor_1_2": {"x": 520, "y": 576, "width": 130, "height": 15},
+    "Produto_1_2": {"x": 45, "y": 575, "width": 150, "height": 15},
+    "Quant_1_2": {"x": 120, "y": 575, "width": 50, "height": 15},
+    "Descricao_Mercadoria_1_2": {"x": 170, "y": 575, "width": 350, "height": 15},
+    "Valor_1_2": {"x": 510, "y": 575, "width": 130, "height": 15},
 
-    "Produto_2_2": {"x": 58, "y": 590, "width": 150, "height": 15},
+    "Produto_2_2": {"x": 45, "y": 590, "width": 150, "height": 15},
     "Quant_2_2": {"x": 120, "y": 590, "width": 50, "height": 15},
     "Descricao_Mercadoria_2_2": {"x": 170, "y": 590, "width": 350, "height": 15},
-    "Valor_2_2": {"x": 520, "y": 590, "width": 130, "height": 15},
+    "Valor_2_2": {"x": 510, "y": 590, "width": 130, "height": 15},
 
-    "Produto_3_2": {"x": 58, "y": 728, "width": 150, "height": 15},
-    "Quant_3_2": {"x": 120, "y": 728, "width": 50, "height": 15},
-    "Descricao_Mercadoria_3_2": {"x": 170, "y": 728, "width": 350, "height": 15},
-    "Valor_3_2": {"x": 520, "y": 728, "width": 130, "height": 15},
+    "Produto_3_2": {"x": 45, "y": 606, "width": 150, "height": 15},
+    "Quant_3_2": {"x": 120, "y": 606, "width": 50, "height": 15},
+    "Descricao_Mercadoria_3_2": {"x": 170, "y": 606, "width": 350, "height": 15},
+    "Valor_3_2": {"x": 510, "y": 606, "width": 130, "height": 15},
 
-    "Produto_4_2": {"x": 58, "y": 748, "width": 150, "height": 15},
-    "Quant_4_2": {"x": 120, "y": 748, "width": 50, "height": 15},
-    "Descricao_Mercadoria_4_2": {"x": 170, "y": 748, "width": 350, "height": 15},
-    "Valor_4_2": {"x": 520, "y": 748, "width": 130, "height": 15},
+    "Produto_4_2": {"x": 45, "y": 622, "width": 150, "height": 15},
+    "Quant_4_2": {"x": 120, "y": 622, "width": 50, "height": 15},
+    "Descricao_Mercadoria_4_2": {"x": 170, "y": 622, "width": 350, "height": 15},
+    "Valor_4_2": {"x": 510, "y": 622, "width": 130, "height": 15},
 
-    "Produto_5_2": {"x": 58, "y": 768, "width": 150, "height": 15},
-    "Quant_5_2": {"x": 120, "y": 768, "width": 50, "height": 15},
-    "Descricao_Mercadoria_5_2": {"x": 240, "y": 768, "width": 350, "height": 15},
-    "Valor_5_2": {"x": 520, "y": 768, "width": 130, "height": 15},
+    "Produto_5_2": {"x": 45, "y": 639, "width": 150, "height": 15},
+    "Quant_5_2": {"x": 120, "y": 639, "width": 50, "height": 15},
+    "Descricao_Mercadoria_5_2": {"x": 170, "y": 639, "width": 350, "height": 15},
+    "Valor_5_2": {"x": 510, "y": 639, "width": 130, "height": 15},
 
-    "Valor_Total_Produtos_2": {"x": 600, "y": 828, "width": 130, "height": 15},
-    "Desconto_2": {"x": 600, "y": 853, "width": 130, "height": 15},
-    "Valor_Total_a_Pagar_2": {"x": 600, "y": 878, "width": 130, "height": 15},
+    "Valor_Total_Produtos_2": {"x": 510, "y": 655, "width": 130, "height": 15},
+    "Desconto_2": {"x": 510, "y": 670, "width": 130, "height": 15},
+    "Valor_Total_a_Pagar_2": {"x": 510, "y": 685, "width": 130, "height": 15},
 
-    "Pagamento_Dinheiro_2": {"x": 100, "y": 890, "width": 10, "height": 10},
-    "Pagamento_Pix_2": {"x": 100, "y": 910, "width": 10, "height": 10},
-    "Pagamento_Debito_2": {"x": 100, "y": 930, "width": 10, "height": 10},
-    "Pagamento_Credito_2": {"x": 100, "y": 950, "width": 10, "height": 10},
-
-    "Assinatura_Cliente_2": {"x": 100, "y": 948, "width": 300, "height": 15},
-    "N_Assinatura_2": {"x": 650, "y": 948, "width": 80, "height": 15}
+    "Pagamento_Dinheiro_2": {"x": 75, "y": 690, "width": 10, "height": 10},
+    "Pagamento_Pix_2": {"x": 150, "y": 690, "width": 10, "height": 10},
+    "Pagamento_Debito_2": {"x": 230, "y": 690, "width": 10, "height": 10},
+    "Pagamento_Credito_2": {"x": 300, "y": 690, "width": 10, "height": 10}
 
 }
 
