@@ -23,8 +23,8 @@
       <label class="block">Previsão de Entrega:
         <input type="date" name="prevEntrega" class="w-full border p-2 rounded" required/>
       </label>
-      <label class="block">Médico:
-        <select name="medico" class="w-full border p-2 rounded" required>
+      <label class="block mb-2">Médico:
+        <select name="medico" id="medico" class="w-full border p-2 rounded">
           <option value="">Selecione um Médico</option>
           <option>Dr. Kleber</option>
           <option>Dr. Edu Silva</option>
@@ -38,23 +38,28 @@
         </select>
       </label>
 
+      <label class="block mt-2">Ou adicione um novo médico:
+        <input name="novo_medico" id="novo_medico" type="text" placeholder="Digite o nome do médico" class="w-full border p-2 rounded" />
+      </label>
+
+
       <h2 class="text-lg font-semibold mt-6">LONGE</h2>
       <div class="grid grid-cols-2 gap-4">
         <div>
           <h3 class="font-medium">OD</h3>
-          <input name="longe_od_esferico" placeholder="Esférico OD" class="w-full border p-2 rounded" required/>
-          <input name="longe_od_cilindrico" placeholder="Cilíndrico OD" class="w-full border p-2 rounded mt-2" required/>
-          <input name="longe_od_eixo" placeholder="Eixo OD" class="w-full border p-2 rounded mt-2" required/>
-          <input name="longe_od_dnp_altura" placeholder="DNP/Altura OD" class="w-full border p-2 rounded mt-2" required/>
-          <input name="longe_od_adicao" placeholder="Adição OD" class="w-full border p-2 rounded mt-2" required/>
+          <input name="longe_od_esferico" placeholder="Esférico OD" class="w-full border p-2 rounded" />
+          <input name="longe_od_cilindrico" placeholder="Cilíndrico OD" class="w-full border p-2 rounded mt-2" />
+          <input name="longe_od_eixo" placeholder="Eixo OD" class="w-full border p-2 rounded mt-2" />
+          <input name="longe_od_dnp_altura" placeholder="DNP/Altura OD" class="w-full border p-2 rounded mt-2" />
+          <input name="longe_od_adicao" placeholder="Adição OD" class="w-full border p-2 rounded mt-2" />
         </div>
         <div>
           <h3 class="font-medium">OE</h3>
-          <input name="longe_oe_esferico" placeholder="Esférico OE" class="w-full border p-2 rounded" required/>
-          <input name="longe_oe_cilindrico" placeholder="Cilíndrico OE" class="w-full border p-2 rounded mt-2" required/>
-          <input name="longe_oe_eixo" placeholder="Eixo OE" class="w-full border p-2 rounded mt-2" required/>
-          <input name="longe_oe_dnp_altura" placeholder="DNP/Altura OE" class="w-full border p-2 rounded mt-2" required/>
-          <input name="longe_oe_adicao" placeholder="Adição OE" class="w-full border p-2 rounded mt-2" required/>
+          <input name="longe_oe_esferico" placeholder="Esférico OE" class="w-full border p-2 rounded" />
+          <input name="longe_oe_cilindrico" placeholder="Cilíndrico OE" class="w-full border p-2 rounded mt-2" />
+          <input name="longe_oe_eixo" placeholder="Eixo OE" class="w-full border p-2 rounded mt-2" />
+          <input name="longe_oe_dnp_altura" placeholder="DNP/Altura OE" class="w-full border p-2 rounded mt-2" />
+          <input name="longe_oe_adicao" placeholder="Adição OE" class="w-full border p-2 rounded mt-2" />
         </div>
       </div>
 
@@ -62,19 +67,19 @@
       <div class="grid grid-cols-2 gap-4">
         <div>
           <h3 class="font-medium">OD</h3>
-          <input name="perto_od_esferico" placeholder="Esférico OD" class="w-full border p-2 rounded" required/>
-          <input name="perto_od_cilindrico" placeholder="Cilíndrico OD" class="w-full border p-2 rounded mt-2" required/>
-          <input name="perto_od_eixo" placeholder="Eixo OD" class="w-full border p-2 rounded mt-2" required/>
-          <input name="perto_od_dnp_altura" placeholder="DNP/Altura OD" class="w-full border p-2 rounded mt-2" required/>
-          <input name="perto_od_adicao" placeholder="Adição OD" class="w-full border p-2 rounded mt-2" required/>
+          <input name="perto_od_esferico" placeholder="Esférico OD" class="w-full border p-2 rounded" />
+          <input name="perto_od_cilindrico" placeholder="Cilíndrico OD" class="w-full border p-2 rounded mt-2" />
+          <input name="perto_od_eixo" placeholder="Eixo OD" class="w-full border p-2 rounded mt-2" />
+          <input name="perto_od_dnp_altura" placeholder="DNP/Altura OD" class="w-full border p-2 rounded mt-2" />
+          <input name="perto_od_adicao" placeholder="Adição OD" class="w-full border p-2 rounded mt-2" />
         </div>
         <div>
           <h3 class="font-medium">OE</h3>
-          <input name="perto_oe_esferico" placeholder="Esférico OE" class="w-full border p-2 rounded" required/>
-          <input name="perto_oe_cilindrico" placeholder="Cilíndrico OE" class="w-full border p-2 rounded mt-2" required/>
-          <input name="perto_oe_eixo" placeholder="Eixo OE" class="w-full border p-2 rounded mt-2" required/>
-          <input name="perto_oe_dnp_altura" placeholder="DNP/Altura OE" class="w-full border p-2 rounded mt-2" required/>
-          <input name="perto_oe_adicao" placeholder="Adição OE" class="w-full border p-2 rounded mt-2" required/>
+          <input name="perto_oe_esferico" placeholder="Esférico OE" class="w-full border p-2 rounded" />
+          <input name="perto_oe_cilindrico" placeholder="Cilíndrico OE" class="w-full border p-2 rounded mt-2" />
+          <input name="perto_oe_eixo" placeholder="Eixo OE" class="w-full border p-2 rounded mt-2" />
+          <input name="perto_oe_dnp_altura" placeholder="DNP/Altura OE" class="w-full border p-2 rounded mt-2" />
+          <input name="perto_oe_adicao" placeholder="Adição OE" class="w-full border p-2 rounded mt-2" />
         </div>
       </div>
 
@@ -107,7 +112,7 @@
           <option>VITOR MARTINS</option>
           <option>ANA CLAUDIA</option>
           <option>THAISSA EVELYN</option>
-          <option>HERIEK MARCOS</option>
+          <option>HERICK MARCOS</option>
           <option>VICTOR JUNIOR</option>
           <option>ESTAGIÁRIO(A)</option>
         </select>
@@ -202,6 +207,17 @@
 
     e.target.value = value;
   });
+
+  document.querySelector('form').addEventListener('submit', function (e) {
+    const selectMedico = document.querySelector('select[name="medico"]');
+    const inputNovoMedico = document.querySelector('input[name="novo_medico"]');
+
+    if (inputNovoMedico.value.trim() !== '') {
+      selectMedico.value = inputNovoMedico.value.trim(); // substitui o valor do <select>
+    }
+  });
+
+
 
 //     const formatCurrencyInput = (input) => {
 //     input.addEventListener('input', () => {

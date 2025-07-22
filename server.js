@@ -58,9 +58,33 @@ app.post('/gerar-pdf', async (req, res) => {
     drawTextAtCoordinate(firstPage, data.endereco, 'Endereço');
     drawTextAtCoordinate(firstPage, data.cidade, 'Cidade');
     drawTextAtCoordinate(firstPage, data.estado, 'Est');
-    drawTextAtCoordinate(firstPage, data.dataCompra, 'Data Compra');
-    drawTextAtCoordinate(firstPage, data.prevEntrega, 'Prev. Entrega');
-    drawTextAtCoordinate(firstPage, data.medico, 'Médico');
+
+
+    //Data Compra//
+    function formatarDataBrasileira(dataISO) {
+      if (!dataISO) return '';
+        const [ano, mes, dia] = dataISO.split('-');
+      return `${dia}/${mes}/${ano}`;
+    }
+
+    const dataFormatada = formatarDataBrasileira(data.dataCompra);
+    drawTextAtCoordinate(firstPage, dataFormatada, 'Data Compra');
+
+    //Data Entrega//
+    function formatarDataBrasileira(dataISO) {
+      if (!dataISO) return '';
+        const [ano, mes, dia] = dataISO.split('-');
+      return `${dia}/${mes}/${ano}`;
+    }
+
+    const dataFormatadaEntrega = formatarDataBrasileira(data.prevEntrega);
+    drawTextAtCoordinate(firstPage, dataFormatadaEntrega, 'Prev. Entrega');
+  
+    
+    //Médico//
+    const nomeMedico = data.novo_medico?.trim() || data.medico?.trim() || '';
+    drawTextAtCoordinate(firstPage, nomeMedico, 'Médico');
+
 
     // Campos LONGE
     drawTextAtCoordinate(firstPage, data.longe_od_esferico, 'Longe_OD_Esferico');
