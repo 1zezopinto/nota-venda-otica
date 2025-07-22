@@ -391,7 +391,9 @@
     "Pagamento_Dinheiro_2": {"x": 75, "y": 690, "width": 10, "height": 10},
     "Pagamento_Pix_2": {"x": 150, "y": 690, "width": 10, "height": 10},
     "Pagamento_Debito_2": {"x": 230, "y": 690, "width": 10, "height": 10},
-    "Pagamento_Credito_2": {"x": 300, "y": 690, "width": 10, "height": 10}
-
+    "Pagamento_Credito_2": {"x": 300, "y": 690, "width": 10, "height": 10},
+    
+    "numero-ficha": {"x": 536, "y": 452, "width": 12, "height": 12},
+    "numero-ficha_2": {"x": 536, "y": 778, "width": 12, "height": 12}
 }
 

@@ -59,6 +59,10 @@ app.post('/gerar-pdf', async (req, res) => {
     drawTextAtCoordinate(firstPage, data.cidade, 'Cidade');
     drawTextAtCoordinate(firstPage, data.estado, 'Est');
 
+    drawTextAtCoordinate(firstPage, data["numero-ficha"], 'numero-ficha');
+    drawTextAtCoordinate(firstPage, data["numero-ficha"], 'numero-ficha_2');
+
+
 
     //Data Compra//
     function formatarDataBrasileira(dataISO) {
@@ -116,7 +120,6 @@ app.post('/gerar-pdf', async (req, res) => {
     drawTextAtCoordinate(firstPage, `${data.ddd_telefone} ${data.telefoneContato}`, 'Telefone/Contato');
     drawTextAtCoordinate(firstPage, data.fornecedorLab, 'Fornecedor/Lab');
     drawTextAtCoordinate(firstPage, data.consultorVendedor, 'Consultor/Vendedor');
-
 
     const formatarDinheiro = (valor) => {
     const numero = parseFloat(valor);
