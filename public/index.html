@@ -24,8 +24,9 @@
         <input type="date" name="prevEntrega" class="w-full border p-2 rounded" required/>
       </label>
       <label class="block mb-2">Médico:
-        <select name="medico" id="medico" class="w-full border p-2 rounded" required>
+        <select name="medico" id="medico" class="w-full border p-2 rounded">
           <option value="">Selecione um Médico</option>
+          <option>Sem Médico</option>
           <option>Dr. Kleber</option>
           <option>Dr. Edu Silva</option>
           <option>Dr. Reginaldo</option>
@@ -88,9 +89,9 @@
       <input name="telefoneContato" placeholder="Telefone/Contato" class="w-3/4 border p-2 rounded" required/>
 
       <label class="block"> Fornecedor/Lab:
-        <select name="fornecedorLab" class="w-full border p-2 rounded" required>
+        <select name="fornecedorLab" class="w-full border p-2 rounded">
           <option value="">Selecione o Fornecedor</option>
-          <option>BSSILOR</option>
+          <option>ESSILOR</option>
           <option>HOYA</option>
           <option>ZEISS</option>
           <option>LABO</option>
@@ -105,6 +106,11 @@
           <option>BENETINS DIST.</option>
         </select>
       </label>
+
+      <label class="block mt-2">Ou adicione um novo fornecedor:
+        <input name="novo_fornecedor" id="novo_fornecedor" type="text" placeholder="Digite o nome do fornecedor" class="w-full border p-2 rounded" />
+      </label>
+
 
       <label class="block"> Consultor/Vendedor
         <select name="consultorVendedor" class="w-full border p-2 rounded" required>
@@ -148,6 +154,7 @@
       <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Gerar PDF</button>
     </form>
   </div>
+
   <script>
     let produtoCount = 1;
     const maxProdutos = 5;
@@ -218,6 +225,16 @@
       selectMedico.value = inputNovoMedico.value.trim(); 
     }
   });
+
+  document.querySelector('form').addEventListener('submit', function (e) {
+  const selectFornecedor = document.querySelector('select[name="fornecedorLab"]');
+  const inputNovoFornecedor = document.querySelector('input[name="novo_fornecedor"]');
+
+  if (inputNovoFornecedor.value.trim() !== '') {
+    selectFornecedor.value = inputNovoFornecedor.value.trim();
+  }
+});
+
 
   </script>
 </body>

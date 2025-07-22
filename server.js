@@ -119,6 +119,10 @@ app.post('/gerar-pdf', async (req, res) => {
     // Telefone/Contato, Fornecedor/Lab, Consultor/Vendedor
     drawTextAtCoordinate(firstPage, `${data.ddd_telefone} ${data.telefoneContato}`, 'Telefone/Contato');
     drawTextAtCoordinate(firstPage, data.fornecedorLab, 'Fornecedor/Lab');
+
+    const nomeFornecedor = data.novo_fornecedor?.trim() || data.fornecedorLab?.trim() || '';
+    drawTextAtCoordinate(firstPage, nomeFornecedor, 'Fornecedor/Lab');
+
     drawTextAtCoordinate(firstPage, data.consultorVendedor, 'Consultor/Vendedor');
 
     const formatarDinheiro = (valor) => {
