@@ -13,44 +13,42 @@ const coordinates = require('./coordenadas.json');
 
 app.post('/gerar-pdf', async (req, res) => {
   const data = req.body;
-  const existingPdfBytes = fs.readFileSync(path.join(__dirname, 'modelo/nota.pdf'));
 
   try {
+    const existingPdfBytes = fs.readFileSync(path.join(__dirname, 'modelo/nota.pdf'));
     const pdfDoc = await PDFDocument.load(existingPdfBytes);
     const pages = pdfDoc.getPages();
     const firstPage = pages[0];
-
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
-    // Função auxiliar para preencher texto em uma coordenada específica
     const drawTextAtCoordinate = (page, text, coordName) => {
       const coord = coordinates[coordName];
       if (coord && text) {
-        page.drawText(text, {
+        page.drawText(text.toString(), {
           x: coord.x,
-          y: page.getHeight() - coord.y - coord.height, // Ajusta a coordenada Y para o sistema do pdf-lib
+          y: page.getHeight() - coord.y - coord.height,
           font,
-          size: coord.height * 0.7, // Ajusta o tamanho da fonte com base na altura do campo
+          size: coord.height * 0.7,
           color: rgb(0, 0, 0),
         });
       }
     };
 
-    // Função auxiliar para desenhar um 'X' em uma coordenada específica
     const drawXAtCoordinate = (page, coordName) => {
       const coord = coordinates[coordName];
       if (coord) {
         page.drawText('X', {
           x: coord.x,
-          y: page.getHeight() - coord.y - coord.height, // Ajusta a coordenada Y para o sistema do pdf-lib
+          y: page.getHeight() - coord.y - coord.height,
           font,
-          size: coord.height * 0.9, // Tamanho do 'X'
+          size: coord.height * 0.9,
           color: rgb(0, 0, 0),
         });
       }
     };
 
-    // Preenchimento dos campos de texto usando as coordenadas
+    // Preenchimentos (mantidos conforme seu código)
+
     drawTextAtCoordinate(firstPage, data.cliente, 'Cliente');
     drawTextAtCoordinate(firstPage, data.cpf, 'CPF');
     drawTextAtCoordinate(firstPage, data.paciente, 'Paciente');
@@ -62,33 +60,17 @@ app.post('/gerar-pdf', async (req, res) => {
     drawTextAtCoordinate(firstPage, data["numero-ficha"], 'numero-ficha');
     drawTextAtCoordinate(firstPage, data["numero-ficha"], 'numero-ficha_2');
 
-
-
-    //Data Compra//
     function formatarDataBrasileira(dataISO) {
       if (!dataISO) return '';
-        const [ano, mes, dia] = dataISO.split('-');
+      const [ano, mes, dia] = dataISO.split('-');
       return `${dia}/${mes}/${ano}`;
     }
 
-    const dataFormatada = formatarDataBrasileira(data.dataCompra);
-    drawTextAtCoordinate(firstPage, dataFormatada, 'Data Compra');
+    drawTextAtCoordinate(firstPage, formatarDataBrasileira(data.dataCompra), 'Data Compra');
+    drawTextAtCoordinate(firstPage, formatarDataBrasileira(data.prevEntrega), 'Prev. Entrega');
 
-    //Data Entrega//
-    function formatarDataBrasileira(dataISO) {
-      if (!dataISO) return '';
-        const [ano, mes, dia] = dataISO.split('-');
-      return `${dia}/${mes}/${ano}`;
-    }
-
-    const dataFormatadaEntrega = formatarDataBrasileira(data.prevEntrega);
-    drawTextAtCoordinate(firstPage, dataFormatadaEntrega, 'Prev. Entrega');
-  
-    
-    //Médico//
     const nomeMedico = data.novo_medico?.trim() || data.medico?.trim() || '';
     drawTextAtCoordinate(firstPage, nomeMedico, 'Médico');
-
 
     // Campos LONGE
     drawTextAtCoordinate(firstPage, data.longe_od_esferico, 'Longe_OD_Esferico');
@@ -116,9 +98,7 @@ app.post('/gerar-pdf', async (req, res) => {
     drawTextAtCoordinate(firstPage, data.perto_oe_dnp_altura, 'Perto_OE_DNP_Altura');
     drawTextAtCoordinate(firstPage, data.perto_oe_adicao, 'Perto_OE_Adicao');
 
-    // Telefone/Contato, Fornecedor/Lab, Consultor/Vendedor
     drawTextAtCoordinate(firstPage, `${data.ddd_telefone} ${data.telefoneContato}`, 'Telefone/Contato');
-    drawTextAtCoordinate(firstPage, data.fornecedorLab, 'Fornecedor/Lab');
 
     const nomeFornecedor = data.novo_fornecedor?.trim() || data.fornecedorLab?.trim() || '';
     drawTextAtCoordinate(firstPage, nomeFornecedor, 'Fornecedor/Lab');
@@ -126,67 +106,64 @@ app.post('/gerar-pdf', async (req, res) => {
     drawTextAtCoordinate(firstPage, data.consultorVendedor, 'Consultor/Vendedor');
 
     const formatarDinheiro = (valor) => {
-    const numero = parseFloat(valor);
+      const numero = parseFloat(valor);
       if (isNaN(numero)) return '';
       return `R$ ${numero.toFixed(2).replace('.', ',')}`;
-   };
+    };
 
-    // Produtos (até 5)
-        // Produtos (até 5)
     for (let i = 1; i <= 5; i++) {
       const produto = data[`produto_${i}`];
       const quant = data[`quant_${i}`];
       const descricao = data[`descricao_mercadoria_${i}`];
       const valor = data[`valor_${i}`];
 
-      // Primeira seção de produtos
       drawTextAtCoordinate(firstPage, produto, `Produto_${i}`);
       drawTextAtCoordinate(firstPage, quant, `Quant_${i}`);
       drawTextAtCoordinate(firstPage, descricao, `Descricao_Mercadoria_${i}`);
       drawTextAtCoordinate(firstPage, formatarDinheiro(valor), `Valor_${i}`);
 
-      // Segunda seção de produtos
       drawTextAtCoordinate(firstPage, produto, `Produto_${i}_2`);
       drawTextAtCoordinate(firstPage, quant, `Quant_${i}_2`);
       drawTextAtCoordinate(firstPage, descricao, `Descricao_Mercadoria_${i}_2`);
       drawTextAtCoordinate(firstPage, formatarDinheiro(valor), `Valor_${i}_2`);
     }
 
-
     // Forma de Pagamento (marcar 'X')
-    const formaPagamentoEscolhida = data.pagamento;
-    switch (formaPagamentoEscolhida) {
-      case 'Dinheiro':
-        drawXAtCoordinate(firstPage, 'Pagamento_Dinheiro');
-        drawXAtCoordinate(firstPage, 'Pagamento_Dinheiro_2');
-        break;
-      case 'Pix':
-        drawXAtCoordinate(firstPage, 'Pagamento_Pix');
-        drawXAtCoordinate(firstPage, 'Pagamento_Pix_2');
-        break;
-      case 'Débito':
-        drawXAtCoordinate(firstPage, 'Pagamento_Debito');
-        drawXAtCoordinate(firstPage, 'Pagamento_Debito_2');
-        break;
-      case 'Crédito':
-        drawXAtCoordinate(firstPage, 'Pagamento_Credito');
-        drawXAtCoordinate(firstPage, 'Pagamento_Credito_2');
-        break;
-    }
+    const formasPagamento = Array.isArray(data.pagamento) ? data.pagamento : [data.pagamento];
 
-  drawTextAtCoordinate(firstPage, formatarDinheiro(data.valorTotalProdutos), 'Valor_Total_Produtos');
-  drawTextAtCoordinate(firstPage, formatarDinheiro(data.desconto), 'Desconto');
-  drawTextAtCoordinate(firstPage, formatarDinheiro(data.valorTotalPagar), 'Valor_Total_a_Pagar');
+    formasPagamento.forEach((forma) => {
+      switch (forma) {
+        case 'Dinheiro':
+          drawXAtCoordinate(firstPage, 'Pagamento_Dinheiro');
+          drawXAtCoordinate(firstPage, 'Pagamento_Dinheiro_2');
+          break;
+        case 'Pix':
+          drawXAtCoordinate(firstPage, 'Pagamento_Pix');
+          drawXAtCoordinate(firstPage, 'Pagamento_Pix_2');
+          break;
+        case 'Débito':
+          drawXAtCoordinate(firstPage, 'Pagamento_Debito');
+          drawXAtCoordinate(firstPage, 'Pagamento_Debito_2');
+          break;
+        case 'Crédito':
+          drawXAtCoordinate(firstPage, 'Pagamento_Credito');
+          drawXAtCoordinate(firstPage, 'Pagamento_Credito_2');
+          break;
+      }
+    });
 
-  drawTextAtCoordinate(firstPage, formatarDinheiro(data.valorTotalProdutos), 'Valor_Total_Produtos_2');
-  drawTextAtCoordinate(firstPage, formatarDinheiro(data.desconto), 'Desconto_2');
-  drawTextAtCoordinate(firstPage, formatarDinheiro(data.valorTotalPagar), 'Valor_Total_a_Pagar_2');
 
+    drawTextAtCoordinate(firstPage, formatarDinheiro(data.valorTotalProdutos), 'Valor_Total_Produtos');
+    drawTextAtCoordinate(firstPage, formatarDinheiro(data.desconto), 'Desconto');
+    drawTextAtCoordinate(firstPage, formatarDinheiro(data.valorTotalPagar), 'Valor_Total_a_Pagar');
+
+    drawTextAtCoordinate(firstPage, formatarDinheiro(data.valorTotalProdutos), 'Valor_Total_Produtos_2');
+    drawTextAtCoordinate(firstPage, formatarDinheiro(data.desconto), 'Desconto_2');
+    drawTextAtCoordinate(firstPage, formatarDinheiro(data.valorTotalPagar), 'Valor_Total_a_Pagar_2');
 
     const pdfBytes = await pdfDoc.save();
     res.setHeader('Content-Type', 'application/pdf');
     res.send(Buffer.from(pdfBytes));
-
   } catch (error) {
     console.error('Erro ao gerar o PDF:', error);
     res.status(500).send('Erro ao gerar o PDF. Verifique o console do servidor para mais detalhes.');
@@ -194,5 +171,3 @@ app.post('/gerar-pdf', async (req, res) => {
 });
 
 app.listen(3000, () => console.log('Servidor rodando em http://localhost:3000'));
-
-
